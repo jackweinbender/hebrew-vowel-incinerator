@@ -6,6 +6,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hebrew {
+            font-size:1.5em; 
+            font-family:'Times New Roman'; 
+            text-align: right;
+            text-direction:rtl;
+        }
+    </style>
     </head>
     <body>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
@@ -22,13 +30,13 @@
                 <div class="col-xs-6">
                     <form action="">
                     <label for="input">Paste Hebrew Text Here:</label>
-                    <textarea ng-model="hebrew" name="input" id="input" cols="30" rows="10" style="font-size:1.5em; font-family:'times New Roman'; text-direction:rtl;" class="form-control"></textarea>
+                    <textarea ng-model="hebrew" name="input" id="input" cols="30" rows="10" class="form-control hebrew"></textarea>
                 </form>
                 </div>
                 <div class="col-xs-6">
                     <form action="">
                     <label for="output">Output</label>
-                    <textarea name="output" id="output" cols="30" rows="10" style="font-size:1.5em; font-family:'times New Roman'; text-direction:rtl;" class="form-control">{{ hebrew | vowels }}</textarea>
+                    <textarea name="output" id="output" cols="30" rows="10" class="form-control hebrew">{{ hebrew | vowels }}</textarea>
                 </form>
                 </div>
             </div>
