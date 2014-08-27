@@ -9,11 +9,9 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     if (!input){
         return '';
     }
-
+    
     var output = input;
     // Vowels
-
-/* */
     output = output.replace(/ָ/g, ''); // Qamets
     output = output.replace(/ַ/g, ''); // Patach
     output = output.replace(/ֲ/g, ''); // Hatef-patach
@@ -29,10 +27,10 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     output = output.replace(/אָ/g, 'א'); // Aleph-qamets
     output = output.replace(/אַ/g, 'א'); // Aleph-patach
     // Other
-    output = output.replace(/ּ/g, 'א'); // Mappiq
-    output = output.replace(/ֽ/g, 'א'); // Meteg
-    output = output.replace(/ׁ/g, 'א'); // Shin-dot
-    output = output.replace(/ׂ/g, 'א'); // Sin-dot
+    output = output.replace(/ּ/g, ''); // Mappiq
+    output = output.replace(/ֽ/g, ''); // Meteg
+    output = output.replace(/ׁ/g, ''); // Shin-dot
+    output = output.replace(/ׂ/g, ''); // Sin-dot
    	// Consonants
     output = output.replace(/אּ/g, 'א');
     output = output.replace(/בּ/g, 'ב');
