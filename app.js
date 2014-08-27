@@ -61,7 +61,7 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     output = output.replace(/שׁ/g, 'ש');
     output = output.replace(/תּ/g, 'ת');
 
-    output = output.replace(/[1-9]/g, ' ');
+    output = output.replace(/[0-9]/g, ' ');
 
    	return output;
   };
