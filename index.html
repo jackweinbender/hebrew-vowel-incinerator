@@ -18,15 +18,19 @@
             <div class="header">
                 <h1>Hebrew Formatter</h1>
             </div>
-
-            <div class="jumbotron">
-                <form action="">
-                    <textarea ng-model="hebrew" name="" id="" cols="30" rows="10" class="form-control">Paste Hebrew Text Here</textarea>
-                </form>
-            </div>
-
             <div class="row">
-                {{ hebrew }}
+                <div class="col-xs-6">
+                    <form action="">
+                    <label for="input">Paste Hebrew Text Here:</label>
+                    <textarea ng-model="hebrew" name="input" id="input" cols="30" rows="10" style="font-size:1.5em; font-family:'times New Roman'; text-direction:rtl;" class="form-control"></textarea>
+                </form>
+                </div>
+                <div class="col-xs-6">
+                    <form action="">
+                    <label for="output">Output</label>
+                    <textarea name="output" id="output" cols="30" rows="10" style="font-size:1.5em; font-family:'times New Roman'; text-direction:rtl;" class="form-control">{{ hebrew | vowels }}</textarea>
+                </form>
+                </div>
             </div>
 
             <div class="footer">
