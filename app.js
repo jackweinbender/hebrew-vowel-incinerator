@@ -11,6 +11,7 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     }
     
     var output = input;
+
     // Vowels
     output = output.replace(/ָ/g, ''); // Qamets
     output = output.replace(/ַ/g, ''); // Patach
@@ -28,7 +29,6 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     output = output.replace(/אַ/g, 'א'); // Aleph-patach
     // Other
     output = output.replace(/ּ/g, ''); // Mappiq
-    output = output.replace(/ֽ/g, ''); // Meteg
     output = output.replace(/ׁ/g, ''); // Shin-dot
     output = output.replace(/ׂ/g, ''); // Sin-dot
    	// Consonants
@@ -58,6 +58,19 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     output = output.replace(/שׂ/g, 'ש');
     output = output.replace(/שׁ/g, 'ש');
     output = output.replace(/תּ/g, 'ת');
+
+    // Contextual Items (Meteg v. Silluq)
+    output = output.split(' ');
+    
+    for (var i = 0; i < output.length; i++) {
+        console.log(output[i]);
+        console.log(output[i].slice(-1));
+        if(output[i].slice(-1) !== '׃'){
+            output[i] = output[i].replace(/ֽ/g, ''); // Meteg
+        }
+    };
+
+    output = output.join(' ');
 
    	return output;
   };
