@@ -63,8 +63,6 @@ vowels.controller('mainController', ['$scope','vowels', function($scope, vowels)
     output = output.split(' ');
     
     for (var i = 0; i < output.length; i++) {
-        console.log(output[i]);
-        console.log(output[i].slice(-1));
         if(output[i].slice(-1) !== '׃'){
             output[i] = output[i].replace(/ֽ/g, ''); // Meteg
         }
